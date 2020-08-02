@@ -39,7 +39,7 @@ namespace ZVocEngl.API
                 options.UseSqlServer(connectionString);
             });
 
-            services.AddIdentity<Users, IdentityRole>(set =>
+            services.AddIdentity<User, IdentityRole>(set =>
             {
                 set.Password = new PasswordOptions()
                 {

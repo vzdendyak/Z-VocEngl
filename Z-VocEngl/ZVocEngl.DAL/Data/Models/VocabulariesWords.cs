@@ -11,7 +11,7 @@ namespace ZVocEngl.DAL.Data.Models
         public int Id { get; set; }
         public int WordId { get; set; }
         public int VocabularyId { get; set; }
-        public Words Word { get; set; }
-        public Vocabularies Vocabulary { get; set; }
+        public Word Word { get; set; }
+        public Vocabulary Vocabulary { get; set; }
     }
 }

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ZVocEngl.DAL.Data.Models
 {
-    public class Users : IdentityUser
+    public class User : IdentityUser
     {
         private string Info { get; set; }
 
-        public virtual ICollection<Vocabularies> Vocabularies { get; set; }
+        public virtual ICollection<Vocabulary> Vocabularies { get; set; }
     }
 }

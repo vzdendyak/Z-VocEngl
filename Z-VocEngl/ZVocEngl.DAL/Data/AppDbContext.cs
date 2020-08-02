@@ -15,20 +15,20 @@ namespace ZVocEngl.DAL.Data
             // Database.EnsureCreated();
         }
 
-        public DbSet<Vocabularies> Vocabularies { get; set; }
-        public DbSet<CollocationWords> CollocationWords { get; set; }
-        public DbSet<DefinitionSynonyms> DefinitionSynonyms { get; set; }
-        public DbSet<Examples> Examples { get; set; }
-        public DbSet<PartsOfSpeeches> PartsOfSpeeches { get; set; }
-        public DbSet<Types> Types { get; set; }
+        public DbSet<Vocabulary> Vocabularies { get; set; }
+        public DbSet<CollocationWord> CollocationWords { get; set; }
+        public DbSet<DefinitionSynonym> DefinitionSynonyms { get; set; }
+        public DbSet<Example> Examples { get; set; }
+        public DbSet<PartsOfSpeech> PartsOfSpeeches { get; set; }
+        public DbSet<Models.Type> Types { get; set; }
         public DbSet<VocabulariesWords> VocabulariesWords { get; set; }
-        public DbSet<WordInformations> WordInformations { get; set; }
-        public DbSet<Words> Words { get; set; }
+        public DbSet<WordInformation> WordInformations { get; set; }
+        public DbSet<Word> Words { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Vocabularies>()
+            builder.Entity<Vocabulary>()
                 .HasOne(v => v.User)
                 .WithMany(u => u.Vocabularies)
                 .HasForeignKey(v => v.UserId);
@@ -42,32 +42,32 @@ namespace ZVocEngl.DAL.Data
                 .WithMany(e => e.VocabulariesWords)
                 .HasForeignKey(k => k.VocabularyId);
 
-            builder.Entity<WordInformations>()
+            builder.Entity<WordInformation>()
                 .HasOne(e => e.Word)
                 .WithMany(e => e.WordInformations)
                 .HasForeignKey(k => k.WordId);
 
-            builder.Entity<WordInformations>()
+            builder.Entity<WordInformation>()
                 .HasOne(o => o.Type)
                 .WithMany(m => m.WordInformations)
                 .HasForeignKey(k => k.TypeId);
 
-            builder.Entity<WordInformations>()
+            builder.Entity<WordInformation>()
                 .HasOne(o => o.PartOfSpeech)
                 .WithMany(m => m.WordInformations)
                 .HasForeignKey(k => k.PartOfSpeechId);
 
-            builder.Entity<Examples>()
+            builder.Entity<Example>()
                 .HasOne(o => o.WordInformation)
                 .WithMany(m => m.Examples)
                 .HasForeignKey(k => k.WordInformationId);
 
-            builder.Entity<DefinitionSynonyms>()
+            builder.Entity<DefinitionSynonym>()
                 .HasOne(o => o.WordInformation)
                 .WithMany(m => m.DefinitionSynonyms)
                 .HasForeignKey(k => k.WordInformationId);
 
-            builder.Entity<CollocationWords>()
+            builder.Entity<CollocationWord>()
                 .HasOne(o => o.WordInformation)
                 .WithMany(m => m.CollocationWords)
                 .HasForeignKey(k => k.WordInformationId);

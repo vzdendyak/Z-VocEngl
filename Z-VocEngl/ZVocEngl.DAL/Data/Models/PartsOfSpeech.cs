@@ -5,14 +5,11 @@ using System.Text;
 
 namespace ZVocEngl.DAL.Data.Models
 {
-    [Table("Vocabularies")]
-    public class Vocabularies
+    [Table("PartsOfSpeeches")]
+    public class PartsOfSpeech
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
-        public string UserId { get; set; }
-        public Users User { get; set; }
-        public virtual ICollection<VocabulariesWords> VocabulariesWords { get; set; }
+        public virtual ICollection<WordInformation> WordInformations { get; set; }
     }
 }

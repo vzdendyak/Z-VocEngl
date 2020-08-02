@@ -6,7 +6,7 @@ using System.Text;
 namespace ZVocEngl.DAL.Data.Models
 {
     [Table("WordInformations")]
-    public class WordInformations
+    public class WordInformation
     {
         public int Id { get; set; }
         public string Text { get; set; }
@@ -15,12 +15,12 @@ namespace ZVocEngl.DAL.Data.Models
         public int TypeId { get; set; }
 
         // nav
-        public ICollection<Examples> Examples { get; set; }
+        public ICollection<Example> Examples { get; set; }
 
-        public ICollection<DefinitionSynonyms> DefinitionSynonyms { get; set; }
-        public ICollection<CollocationWords> CollocationWords { get; set; }
-        public Types Type { get; set; }
-        public Words Word { get; set; }
-        public PartsOfSpeeches PartOfSpeech { get; set; }
+        public ICollection<DefinitionSynonym> DefinitionSynonyms { get; set; }
+        public ICollection<CollocationWord> CollocationWords { get; set; }
+        public Type Type { get; set; }
+        public Word Word { get; set; }
+        public PartsOfSpeech PartOfSpeech { get; set; }
     }
 }

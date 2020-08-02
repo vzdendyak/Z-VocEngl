@@ -5,12 +5,12 @@ using System.Text;
 
 namespace ZVocEngl.DAL.Data.Models
 {
-    [Table("DefinitionSynonyms")]
-    public class DefinitionSynonyms
+    [Table("CollocationWords")]
+    public class CollocationWord
     {
         public int Id { get; set; }
         public string Text { get; set; }
         public int WordInformationId { get; set; }
-        public WordInformations WordInformation { get; set; }
+        public WordInformation WordInformation { get; set; }
     }
 }
