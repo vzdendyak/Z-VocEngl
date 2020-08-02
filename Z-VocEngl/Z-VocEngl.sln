@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZVocEngl.API", "ZVocEngl.API\ZVocEngl.API.csproj", "{72C94B7E-5840-40CC-A77F-D93724F5F675}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZVocEngl.DAL", "ZVocEngl.DAL\ZVocEngl.DAL.csproj", "{06E75C51-B555-4A01-A75D-8F1CA32A817D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72C94B7E-5840-40CC-A77F-D93724F5F675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C94B7E-5840-40CC-A77F-D93724F5F675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C94B7E-5840-40CC-A77F-D93724F5F675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C94B7E-5840-40CC-A77F-D93724F5F675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06E75C51-B555-4A01-A75D-8F1CA32A817D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06E75C51-B555-4A01-A75D-8F1CA32A817D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06E75C51-B555-4A01-A75D-8F1CA32A817D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06E75C51-B555-4A01-A75D-8F1CA32A817D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AB17D3A-3DE8-40AD-93CB-7808E237BD07}
+	EndGlobalSection
+EndGlobal
