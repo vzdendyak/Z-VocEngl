@@ -10,7 +10,10 @@ namespace ZVocEngl.DAL.Data.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        // nav
         public virtual ICollection<VocabulariesWords> VocabulariesWords { get; set; }
+
         public virtual ICollection<WordInformation> WordInformations { get; set; }
     }
 }

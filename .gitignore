@@ -552,3 +552,5 @@ testem.log
 .DS_Store
 Thumbs.db
 /z-done-client-side/dist
+z-vocengl-client/.editorconfig
+z-vocengl-client/.browserslistrc
