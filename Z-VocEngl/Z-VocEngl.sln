@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZVocEngl.API", "ZVocEngl.API\ZVocEngl.API.csproj", "{72C94B7E-5840-40CC-A77F-D93724F5F675}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZVocEngl.DAL", "ZVocEngl.DAL\ZVocEngl.DAL.csproj", "{06E75C51-B555-4A01-A75D-8F1CA32A817D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZVocEngl.DAL", "ZVocEngl.DAL\ZVocEngl.DAL.csproj", "{06E75C51-B555-4A01-A75D-8F1CA32A817D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VocabularyMigrationHelper", "VocabularyMigrationHelper\VocabularyMigrationHelper.csproj", "{1C886BDA-EF86-430B-87BF-ACA5E951BD43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{06E75C51-B555-4A01-A75D-8F1CA32A817D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06E75C51-B555-4A01-A75D-8F1CA32A817D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06E75C51-B555-4A01-A75D-8F1CA32A817D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C886BDA-EF86-430B-87BF-ACA5E951BD43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C886BDA-EF86-430B-87BF-ACA5E951BD43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C886BDA-EF86-430B-87BF-ACA5E951BD43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C886BDA-EF86-430B-87BF-ACA5E951BD43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

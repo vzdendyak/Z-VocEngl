@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Hosting;
@@ -54,6 +55,7 @@ namespace ZVocEngl.API
             services.AddAutoMapper(typeof(Startup));
             services.AddCors();
             services.AddControllers();
+            services.AddMediatR(typeof(Startup));
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigin", builder => builder.AllowAnyOrigin());
