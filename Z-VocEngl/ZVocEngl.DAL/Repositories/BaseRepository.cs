@@ -5,15 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZVocEngl.DAL.Data;
+using ZVocEngl.DAL.Data.Models;
 using ZVocEngl.DAL.Repositories.Interfaces;
 
 namespace ZVocEngl.DAL.Repositories
 {
-    public abstract class BaseRepository<T> : IBaseRepository<T> where T : class
+    public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity
     {
-        public AppDbContext _dbContext { get; set; }
+        private readonly AppDbContext _dbContext;
 
-        protected BaseRepository(AppDbContext dbContext)
+        public BaseRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -37,14 +38,14 @@ namespace ZVocEngl.DAL.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public IQueryable<T> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return _dbContext.Set<T>().AsNoTracking();
+            return await _dbContext.Set<T>().AsNoTracking().ToListAsync();
         }
 
         public async Task<T> GetAsync(int id)
         {
-            return await _dbContext.Set<T>().FindAsync(id);
+            return await _dbContext.Set<T>().Where(t => t.Id == id).FirstOrDefaultAsync();
         }
     }
 }

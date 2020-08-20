@@ -19,6 +19,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using ZVocEngl.DAL.Data;
 using ZVocEngl.DAL.Data.Models;
+using ZVocEngl.DAL.Repositories;
+using ZVocEngl.Application;
+using ZVocEngl.DAL.Repositories.Interfaces;
 
 namespace ZVocEngl.API
 {
@@ -55,19 +58,26 @@ namespace ZVocEngl.API
             services.AddAutoMapper(typeof(Startup));
             services.AddCors();
             services.AddControllers();
-            services.AddMediatR(typeof(Startup));
+
+            services.RegisterApplication();
+
+            var assembly = typeof(Configuration).Assembly;
+            services.AddMediatR(assembly);
+            services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigin", builder => builder.AllowAnyOrigin());
             });
             services.AddMvcCore().AddApiExplorer();
+
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v2", new OpenApiInfo { Title = "Sprint Controller", Version = "v2" });
+                options.SwaggerDoc("v2", new OpenApiInfo { Title = "Z-Vocabulary-English", Version = "v2" });
                 var security = new Dictionary<string, IEnumerable<string>>
                 {
                      {"Bearer", new string[0] }
                 };
+                options.CustomSchemaIds(f => f.FullName);
                 //options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 //{
                 //    Description = "JWT Authorization header using the bearer scheme",

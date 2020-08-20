@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ZVocEngl.Application\ZVocEngl.Application.csproj" />
     <ProjectReference Include="..\ZVocEngl.DAL\ZVocEngl.DAL.csproj" />
   </ItemGroup>
 </Project>

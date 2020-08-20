@@ -6,7 +6,7 @@ using System.Text;
 namespace ZVocEngl.DAL.Data.Models
 {
     [Table("PartsOfSpeeches")]
-    public class PartsOfSpeech
+    public class PartsOfSpeech : IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

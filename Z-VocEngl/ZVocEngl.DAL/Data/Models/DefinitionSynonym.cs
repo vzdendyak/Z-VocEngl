@@ -6,7 +6,7 @@ using System.Text;
 namespace ZVocEngl.DAL.Data.Models
 {
     [Table("DefinitionSynonyms")]
-    public class DefinitionSynonym
+    public class DefinitionSynonym : IEntity
     {
         public int Id { get; set; }
         public string Text { get; set; }

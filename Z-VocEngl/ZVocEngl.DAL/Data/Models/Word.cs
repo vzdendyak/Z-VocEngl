@@ -6,7 +6,7 @@ using System.Text;
 namespace ZVocEngl.DAL.Data.Models
 {
     [Table("Words")]
-    public class Word
+    public class Word : IEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

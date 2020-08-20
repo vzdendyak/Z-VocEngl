@@ -8,7 +8,7 @@ namespace ZVocEngl.DAL.Repositories.Interfaces
 {
     public interface IBaseRepository<T> where T : class
     {
-        IQueryable<T> GetAllAsync();
+        Task<IEnumerable<T>> GetAllAsync();
 
         Task<T> GetAsync(int id);
 

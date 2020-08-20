@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZVocEngl.DAL", "ZVocEngl.DA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VocabularyMigrationHelper", "VocabularyMigrationHelper\VocabularyMigrationHelper.csproj", "{1C886BDA-EF86-430B-87BF-ACA5E951BD43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZVocEngl.Application", "ZVocEngl.Application\ZVocEngl.Application.csproj", "{A3EC7DBC-82AD-4A36-882E-51DE573C54DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1C886BDA-EF86-430B-87BF-ACA5E951BD43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C886BDA-EF86-430B-87BF-ACA5E951BD43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C886BDA-EF86-430B-87BF-ACA5E951BD43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3EC7DBC-82AD-4A36-882E-51DE573C54DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3EC7DBC-82AD-4A36-882E-51DE573C54DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3EC7DBC-82AD-4A36-882E-51DE573C54DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3EC7DBC-82AD-4A36-882E-51DE573C54DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
