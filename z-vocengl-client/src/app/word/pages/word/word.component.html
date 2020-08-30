@@ -1,8 +1,8 @@
 <div class="content" [ngClass]="{'lock': this.headerService.burgerActive}">
   <div class="container">
     <div class="word-info-header">
-      <span class="word-name">Abandon</span>
-      <app-word-info></app-word-info>
+      <span class="word-name">{{word?.name}}</span>
+      <app-word-info [collocations]="collocations" [meanings]="meanings"></app-word-info>
     </div>
   </div>
 </div>

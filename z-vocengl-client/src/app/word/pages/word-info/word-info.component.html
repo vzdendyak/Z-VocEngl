@@ -8,33 +8,30 @@
   </div>
 
   <ul class="info-list" [ngClass]="{'hidden': !this.wordService.meaningExpanded}">
-    <li>
+    <li *ngFor="let info of meanings">
       <div class="info-item-container">
-        <span class="part-of-speech">NOUN</span>
+        <span class="part-of-speech">{{info.partOfSpeech.name}}</span>
         <div class="speech-indicator-container">
           <span class="part-of-speech-indicator"></span>
         </div>
-        <span class="info-text">a feeling of extreme emotional intensity</span>
+        <span class="info-text">{{info.text}}</span>
         <ul class="synonyms-list">
-          <li>
-            <span>wildness</span>
+          <li *ngFor="let synonym of info.definitionsSynonyms">
+            <span>{{synonym.text}}</span>
           </li>
-          <li>
-            <span>be found/left abandoned</span>
-          </li>
+
         </ul>
-        <ul class="examples-list">
-          <li>
+<!--        <ul class="synonyms-list">-->
+<!--          <li *ngFor="let s of info.definitionsSynonyms">-->
+<!--            <span>{{s.text}}</span>-->
+<!--          </li>-->
+<!--        </ul>-->
+        <ul class="examples-list" *ngIf="info.examples.length>0">
+          <li *ngFor="let example of info.examples">
             <div class="example-indicator-container">
               <span class="example-indicator"></span>
             </div>
-            <span>He abandoned the thought of asking for her hand in marriage</span>
-          </li>
-          <li>
-            <div class="example-indicator-container">
-              <span class="example-indicator"></span>
-            </div>
-            <span>He abandoned the thought of asking for her hand in marriage</span>
+            <span>{{example.text}}</span>
           </li>
         </ul>
       </div>
@@ -50,34 +47,27 @@
     </div>
   </div>
   <ul class="info-list" [ngClass]="{'hidden': !this.wordService.collocationsExpanded}">
-    <li>
+    <li *ngFor="let collocation of collocations">
       <div class="info-item-container">
-        <span class="part-of-speech">VERB</span>
+        <span class="part-of-speech">{{collocation.partOfSpeech.name}}</span>
         <div class="speech-indicator-container">
           <span class="part-of-speech-indicator"></span>
         </div>
-        <span class="info-text">leave sb/sth</span>
+        <span class="info-text">{{collocation.text}}</span>
         <ul class="synonyms-list">
-          <li>
-            <span>hastily</span>
+          <li *ngFor="let synonym of collocation.collocationWords">
+            <span>{{synonym.text}}</span>
           </li>
-          <li>
-            <span>be found/left abandoned</span>
-          </li>
+
         </ul>
-        <ul class="examples-list">
-          <li>
+        <ul class="examples-list" *ngIf="collocation.examples.length>0">
+          <li *ngFor="let example of collocation.examples">
             <div class="example-indicator-container">
               <span class="example-indicator"></span>
             </div>
-            <span>The car was found abandoned in a nearby town.</span>
+            <span>{{example.text}}</span>
           </li>
-          <li>
-            <div class="example-indicator-container">
-              <span class="example-indicator"></span>
-            </div>
-            <span>The village had been hastily abandoned</span>
-          </li>
+
         </ul>
       </div>
     </li>

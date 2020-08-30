@@ -12,7 +12,7 @@
   line-height: 21px;
 
   position: relative;
-  left: 40px;
+  left: 35px;
 }
 
 .synonyms-list li span {
@@ -58,7 +58,7 @@ ul{
 .synonyms-list {
   position: relative;
   left: 9%;
-  display: flex;
+  display: block;
 }
 
 .examples-list {
@@ -73,7 +73,23 @@ ul{
 .examples-list li {
   padding: 5px 0px;
 }
-
+.info-container {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.info-list{
+  padding: 10px 15px;
+}
+.info-item-container {
+  //display: block;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  padding: 5px 10px;
+  border-left: 4px solid #FF9800;
+}
+.examples-list{
+  margin-top: 10px;
+}
 .synonyms-list li {
   padding: 4px 10px;
 }
@@ -206,6 +222,25 @@ $arrow-color: #337AB7;
   border-color: red transparent transparent red;
   border-radius: 3.5px;
 }
+@media (max-width: 768px) {
+  .info-container {
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+  .info-list{
+    padding: 10px 15px;
+  }
+  .info-item-container {
+    //display: block;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    border-left: 4px solid #FF9800;
+  }
+  .examples-list{
+    margin-top: 10px;
+  }
+}
 @media (max-width: 500px) {
 
 
@@ -214,7 +249,7 @@ $arrow-color: #337AB7;
     padding-top: 10px;
   }
   .info-list{
-    padding: 10px 10px  ;
+    padding: 10px 5px  ;
   }
   .info-header {
     font-size: 22px;
@@ -269,11 +304,16 @@ $arrow-color: #337AB7;
   }
   .info-item-container{
     display: block;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    border-left: 4px solid #FF9800;
   }
   .info-text{
     display: block;
     padding-top: 5px;
     left: 0px;
+    margin-bottom: 5px;
     font-size: 17px;
   }
   .examples-list{
