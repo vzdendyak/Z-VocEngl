@@ -37,7 +37,6 @@ html, body {
 }
 
 
-
 .menu-points-list {
   display: flex;
   position: relative;
@@ -87,7 +86,13 @@ html, body {
   margin: 0 0 20px 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 910px) {
+  .menu-points-list li {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 768px) {
   .header-burger {
     display: block;
     position: absolute;
@@ -146,10 +151,11 @@ html, body {
     display: block;
     text-align: center;
     height: 90%;
+
   }
   .menu-points-list li {
     margin: 20px auto;
-    padding: 20px;
+    padding: 0 5px;
 
     .header-link:hover {
       color: #ffd100;
@@ -166,7 +172,10 @@ html, body {
 
   }
 
-
+  .search-form {
+    left: 0;
+    margin-right: 50px;
+  }
 }
 
 // for js
@@ -191,3 +200,60 @@ html, body {
 // SECOND FILE
 
 
+.search-form {
+  z-index: 5;
+}
+
+.search-form {
+  position: relative;
+  //width: 300px;
+  //margin: 0 auto;
+}
+
+.input-form {
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+  border: 2px solid #7BA7AB;
+  border-radius: 5px;
+  outline: none;
+  background: #F9F0DA;
+  color: #9E9C9C;
+}
+
+.button-icon {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: #7BA7AB;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.button-icon:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
+}
+
+@media (max-width: 320px) {
+  .logo-text img {
+    width: 80%;
+  }
+  .logo-text {
+    width: 70%;
+    flex: auto;
+  }
+  .input-form {
+    height: 30px;
+    width: 120px;
+    font-size: 10px;
+  }
+  .button-icon {
+    height: 30px;
+  }
+}
