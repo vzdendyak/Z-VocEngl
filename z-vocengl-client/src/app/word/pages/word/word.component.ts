@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HeaderService} from '../../../header/header.service';
 
 @Component({
   selector: 'app-word',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WordComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public headerService: HeaderService) { }
 
   ngOnInit(): void {
   }

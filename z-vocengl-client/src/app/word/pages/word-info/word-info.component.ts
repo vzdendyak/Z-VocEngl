@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {WordService} from '../../word.service';
 
 @Component({
   selector: 'app-word-info',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WordInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public wordService: WordService) {
+  }
 
   ngOnInit(): void {
   }
 
+  meaningsClick(): void {
+    this.wordService.meaningExpanded = !this.wordService.meaningExpanded;
+  }
+
+  collocationsClick(): void {
+    this.wordService.collocationsExpanded = !this.wordService.collocationsExpanded;
+  }
 }

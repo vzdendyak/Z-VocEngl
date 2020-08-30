@@ -7,13 +7,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   burgerActive: boolean;
-  meaningsExpanded: boolean;
-  collocationsExpanded: boolean;
+
 
   constructor() {
     this.burgerActive = false;
-    this.collocationsExpanded = true;
-    this.meaningsExpanded = true;
   }
 
   ngOnInit(): void {
@@ -26,11 +23,5 @@ export class HeaderComponent implements OnInit {
     document.body.classList.toggle('lock');
   }
 
-  meaningsClick(): void {
-    this.meaningsExpanded = !this.meaningsExpanded;
-  }
 
-  collocationsClick(): void {
-    this.collocationsExpanded = !this.collocationsExpanded;
-  }
 }
