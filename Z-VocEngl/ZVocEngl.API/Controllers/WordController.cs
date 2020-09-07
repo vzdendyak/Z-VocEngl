@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ZVocEngl.Application.Features.GetWordInfoByName;
 using ZVocEngl.Application.Features.GetWordInfoById;
+using ZVocEngl.Application.Features.WordCRUD.CreateWord;
 using ZVocEngl.DAL.Data.Models;
-using ZVocEngl.DAL.Repositories.Interfaces;
 
 namespace ZVocEngl.API.Controllers
 {
@@ -38,5 +34,15 @@ namespace ZVocEngl.API.Controllers
             var result = await _mediator.Send(query);
             return Ok(result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] Word word)
+        {
+            var query = new CreateWord.Command(word);
+            var result = await _mediator.Send(query);
+            return result ? (IActionResult) Ok() : BadRequest();
+        }
+
+        
     }
 }

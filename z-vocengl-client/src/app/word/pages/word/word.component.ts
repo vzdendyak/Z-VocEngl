@@ -17,22 +17,19 @@ export class WordComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    // setTimeout(r => {
-    //     this.meanings[2].definitionsSynonyms =  this.collocations[0].collocationWords;
-    //   }, 2000
-    // );
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!this.meanings) {
-      this.meanings = this.word?.wordInformations.filter(r => r.typeId == 1);
+
+      this.meanings = this.word?.wordInformations?.filter(r => r.typeId == 1);
       console.log('CHANGE MEANINGS: ' + this.meanings);
 
-    }
-    if (!this.collocations) {
-      this.collocations = this.word?.wordInformations.filter(r => r.typeId == 2);
+
+
+      this.collocations = this.word?.wordInformations?.filter(r => r.typeId == 2);
       console.log('CHANGE COLLOCATIONS: ' + this.collocations);
-    }
+
 
   }
 

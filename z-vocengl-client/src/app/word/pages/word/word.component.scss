@@ -1,5 +1,5 @@
 .content {
-  height: 100%;
+  //height: 100%;
   background-color: #E9E9E9;
   padding-top: 80px;
 }
@@ -8,9 +8,13 @@
   background-color: white;
   height: 100%;
   //overflow: auto;
+  //overflow: auto;
   //padding-top: 80px;
 }
 
+.container {
+  scrollbar-color: #82B1FF #F5F5F5;
+}
 .word-info-header {
   padding-top: 40px;
   padding-right: 90px;

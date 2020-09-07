@@ -17,8 +17,9 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #3f424d;
+  //background-color: #3f424d;
   z-index: 2;
+  background: linear-gradient(218deg, #235e6c 0%, #3f424d 100%);
 }
 
 .header-body {
@@ -41,6 +42,7 @@ html, body {
   display: flex;
   position: relative;
   z-index: 2;
+  margin: 0;
 }
 
 .menu-points-list li {
@@ -141,7 +143,8 @@ html, body {
     width: 100%;
     overflow: auto;
     height: 100%;
-    background-color: #3f424df2;
+    //background-color: #3f424df2;
+    background: linear-gradient(238deg, #44818f -20%, #3f424d 70%);
     backdrop-filter: blur(3px);
     padding: 70px 10px 20px 10px;
     transition: all 0.2s ease 0s;
@@ -155,7 +158,7 @@ html, body {
   }
   .menu-points-list li {
     margin: 20px auto;
-    padding: 0 5px;
+    padding: 15px 5px;
 
     .header-link:hover {
       color: #ffd100;
@@ -214,7 +217,7 @@ html, body {
   width: 100%;
   height: 35px;
   padding-left: 10px;
-  border: 2px solid #7BA7AB;
+  border: 2px solid #45847e;
   border-radius: 5px;
   outline: none;
   background: #F9F0DA;
@@ -228,7 +231,7 @@ html, body {
   width: 35px;
   height: 35px;
   border: none;
-  background: #7BA7AB;
+  background: #45847e;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }

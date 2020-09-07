@@ -8,9 +8,8 @@
       <div class="header-burger" [ngClass]="{'active': burgerActive}" (click)="burgerClick()">
         <span></span>
       </div>
-      <form class="search-form">
-        <input type="search" class="input-form" placeholder="Пошук по назві">
-
+      <form class="search-form" [formGroup]="searchWordForm" (submit)="searchWordSubmit()">
+        <input type="search" class="input-form" placeholder="Введіть слово" formControlName="Name">
         <button type="submit" class="button-icon"></button>
       </form>
 

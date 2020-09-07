@@ -65,5 +65,11 @@ namespace ZVocEngl.Application.Features.Helpers
                 }).ToList()
             }).FirstOrDefaultAsync();
         }
+
+        public async Task<bool> IsWordExist(string name)
+        {
+            var word = await _context.Words.Where(w => w.Name == name).FirstOrDefaultAsync();
+            return word != null;
+        }
     }
 }
