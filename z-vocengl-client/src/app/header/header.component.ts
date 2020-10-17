@@ -31,6 +31,9 @@ export class HeaderComponent implements OnInit {
     // document.body.classList.add('lock');
     // document.body.classList.remove('lock');
     document.body.classList.toggle('lock');
+    const arra = ['a', 'b', 'c'];
+    let isA = arra.some(value => value.includes('a'));
+
   }
 
 

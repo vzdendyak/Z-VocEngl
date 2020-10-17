@@ -22,13 +22,12 @@ export class WordComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
 
-      this.meanings = this.word?.wordInformations?.filter(r => r.typeId == 1);
-      console.log('CHANGE MEANINGS: ' + this.meanings);
+    this.meanings = this.word?.wordInformations?.filter(r => r.typeId == 1);
+    console.log('CHANGE MEANINGS: ' + this.meanings);
 
 
-
-      this.collocations = this.word?.wordInformations?.filter(r => r.typeId == 2);
-      console.log('CHANGE COLLOCATIONS: ' + this.collocations);
+    this.collocations = this.word?.wordInformations?.filter(r => r.typeId == 2);
+    console.log('CHANGE COLLOCATIONS: ' + this.collocations);
 
 
   }

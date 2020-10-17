@@ -1,0 +1,36 @@
+.content {
+  height: 100%;
+  background-color: #E9E9E9;
+  padding-top: 80px;
+}
+
+.container {
+  background-color: white;
+  height: 100%;
+  scrollbar-color: #82B1FF #F5F5F5;
+
+}
+
+.words-list {
+  padding: 30px 40px;
+}
+
+.word-element {
+  padding: 10px 50px;
+  display: flex;
+  font-size: 15pt;
+  align-items: center;
+}
+
+.word-name {
+  display: block;
+  padding-left: 5px;
+
+}
+
+.word-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #00b6b6;
+}
